@@ -1,0 +1,17 @@
+﻿reference_id,primary_standard_id,referenced_standard_id,relationship_type,description,status
+1,1,10,Material Standard,IS 694 specifies IS 5831 for its PVC insulation and sheath material requirements.,Verified
+2,2,10,Material Standard,IS 1554 (Part 1) specifies IS 5831 for its heavy-duty PVC insulation material.,Verified
+3,12,13,Safety ↔ Performance,IS 16102 requires both Part 1 (Safety) and Part 2 (Performance) for complete LED lamp compliance.,Verified
+4,14,15,Safety ↔ Performance,IS 16103 requires both Part 1 (Safety) and Part 2 (Performance) for complete LED module compliance.,Verified
+5,12,20,Related Safety Standard,IS 16102 (Part 1) requires checking IS 16108 for photobiological and optical radiation safety.,Verified
+6,13,18,Test Method,IS 16102 (Part 2) uses IS 16105 for testing the lumen maintenance of the LED lamps.,Verified
+7,13,19,Test Method,IS 16102 (Part 2) uses IS 16106 for electrical and photometric measurements.,Verified
+8,21,22,Reinforcement Material,IS 456 structural design specifies IS 1786 for the high strength deformed steel reinforcement bars.,Verified
+9,21,23,Concrete Material,IS 456 specifies IS 383 for the coarse and fine aggregates used in the concrete mix.,Verified
+10,21,24,Mix Design,IS 456 utilizes IS 10262 for the proper proportioning and formulation of the concrete mix.,Verified
+11,21,25,Test Method,IS 456 utilizes IS 516 for laboratory testing of the compressive and flexural strength of concrete.,Verified
+12,21,29,Supporting Technical Handbook,SP 34 acts as the official practical detailing and bar bending handbook for concrete designed under IS 456.,Verified
+13,21,27,Structural Loading,IS 456 relies on IS 875 to calculate dead live wind and snow loads for structural design.,Verified
+14,21,28,Seismic Detailing,IS 456 relies on IS 13920 for ductile detailing of structures in earthquake-prone zones.,Verified
+15,21,26,Material Standard,IS 456 specifies IS 9103 when chemical admixtures are added to the concrete mix.,Verified
+16,12,30,Supporting Technical Document,IS 16102 (Part 1) applications are guided by SP 72 (National Lighting Code) for visual environment design.,Verified
