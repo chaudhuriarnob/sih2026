@@ -1,7 +1,35 @@
+// --- Navigation Logic ---
+function startApp() {
+    document.getElementById('intro-section').classList.remove('active-section');
+    document.getElementById('intro-section').classList.add('hidden-section');
+    
+    document.getElementById('app-section').classList.remove('hidden-section');
+    document.getElementById('app-section').classList.add('active-section');
+}
+
+function goHome() {
+    document.getElementById('app-section').classList.remove('active-section');
+    document.getElementById('app-section').classList.add('hidden-section');
+    
+    document.getElementById('intro-section').classList.remove('hidden-section');
+    document.getElementById('intro-section').classList.add('active-section');
+    
+    // Optional: Clear previous search when going home
+    document.getElementById('queryInput').value = '';
+    document.getElementById('results').innerHTML = '';
+}
+
+// --- Search Engine Logic ---
 async function getRecommendations() {
     const query = document.getElementById('queryInput').value;
     const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = '<p>Processing AI recommendation...</p>';
+    
+    if (!query.trim()) {
+        resultsDiv.innerHTML = '<p style="color: #e11d48; font-weight: bold;">Please enter a specification query.</p>';
+        return;
+    }
+    
+    resultsDiv.innerHTML = '<p style="color: #64748b; font-weight: bold;">Processing AI recommendation...</p>';
     
     try {
         const response = await fetch('/recommend', {
@@ -10,23 +38,20 @@ async function getRecommendations() {
             body: JSON.stringify({ query: query })
         });
         const data = await response.json();
-        resultsDiv.innerHTML = '<h3>Top Matches:</h3>';
+        resultsDiv.innerHTML = '<h3 style="margin-bottom: 20px; color: #1e293b;">Top AI Matches:</h3>';
         
         if (data.matches && data.matches.length > 0) {
             data.matches.forEach(match => {
                 const details = match.details;
-                // Convert 0.5538 format into "55.4%"
                 const matchPercent = (match.score * 100).toFixed(1);
                 
-                // Safely extract fields with fallbacks
-                const standardNum = details.standard_number || 'Unknown Standard';
-                const title = details.title || 'No Title Available';
+                const standardNum = details.standard_number || 'Standard ID';
+                const title = details.title || 'Untitled Document';
                 const description = details.description || 'No description available.';
                 const status = details.status || 'Active';
                 const category = details.category || 'General';
                 const year = details.version_year || 'N/A';
 
-                // Build a clean, structured HTML card for each result
                 resultsDiv.innerHTML += `
                     <div class="card">
                         <div class="card-header">
@@ -43,9 +68,9 @@ async function getRecommendations() {
                 `;
             });
         } else {
-            resultsDiv.innerHTML += '<p>No relevant standards found.</p>';
+            resultsDiv.innerHTML += '<p style="color: #64748b;">No highly relevant standards found for this query.</p>';
         }
     } catch (err) {
-        resultsDiv.innerHTML = '<p style="color: red;">Error connecting to the backend server.</p>';
+        resultsDiv.innerHTML = '<p style="color: #e11d48; font-weight: bold;">Error connecting to the NLP backend server.</p>';
     }
 }

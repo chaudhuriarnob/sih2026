@@ -2,17 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SIH 2026 Standard Recommender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StandardMatch AI - Team AAROHAN</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h2>Government Standard Recommendation Engine</h2>
-        <p>Enter your technical specifications or requirement query below:</p>
-        <input type="text" id="queryInput" placeholder="e.g., PVC insulated electrical cable">
-        <button onclick="getRecommendations()">Search Standards</button>
-        <div id="results"></div>
+    <!-- Introductory Landing Page -->
+    <div id="intro-section" class="active-section">
+        <div class="hero-content">
+            <div class="badge">Team AAROHAN • SIH 2026</div>
+            <h1>StandardMatch AI</h1>
+            <p>The intelligent recommendation engine for automating Bureau of Indian Standards (BIS) compliance in government procurement.</p>
+            <button onclick="startApp()" class="hero-btn">Launch Application</button>
+        </div>
     </div>
+
+    <!-- Main Recommendation Application -->
+    <div id="app-section" class="hidden-section">
+        <header class="app-header">
+            <h2>StandardMatch AI</h2>
+            <button onclick="goHome()" class="nav-btn">← Back to Home</button>
+        </header>
+        
+        <div class="container">
+            <div class="search-header">
+                <h3>Standard Recommendation Engine</h3>
+                <p>Enter technical specifications, equipment details, or requirement queries below:</p>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="queryInput" placeholder="e.g., PVC insulated heavy duty electrical cables">
+                <button onclick="getRecommendations()" class="search-btn">Search Standards</button>
+            </div>
+            
+            <div id="results"></div>
+        </div>
+    </div>
+
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
