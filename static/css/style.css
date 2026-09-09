@@ -82,8 +82,8 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.06;
-    animation: spin 90s linear infinite;
+    opacity: 0.09;
+    animation: spin 120s linear infinite;
     pointer-events: none;
 }
 @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }

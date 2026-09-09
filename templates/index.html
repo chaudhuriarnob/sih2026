@@ -10,23 +10,66 @@
     <!-- Introductory Landing Page -->
     <div id="intro-section" class="active-section">
         <svg class="chakra-backdrop" viewBox="0 0 100 100" aria-hidden="true">
-            <circle cx="50" cy="50" r="46" fill="none" stroke="#000080" stroke-width="1.2"/>
-            <g stroke="#000080" stroke-width="1.2">
-                <!-- 24 spokes -->
-                <line x1="50" y1="4" x2="50" y2="96"/>
-                <line x1="4" y1="50" x2="96" y2="50"/>
-                <line x1="11.5" y1="11.5" x2="88.5" y2="88.5"/>
-                <line x1="11.5" y1="88.5" x2="88.5" y2="11.5"/>
-                <line x1="27" y1="4.7" x2="73" y2="95.3"/>
-                <line x1="4.7" y1="27" x2="95.3" y2="73"/>
-                <line x1="4.7" y1="73" x2="95.3" y2="27"/>
-                <line x1="27" y1="95.3" x2="73" y2="4.7"/>
-                <line x1="18.5" y1="6.7" x2="81.5" y2="93.3"/>
-                <line x1="6.7" y1="18.5" x2="93.3" y2="81.5"/>
-                <line x1="6.7" y1="81.5" x2="93.3" y2="18.5"/>
-                <line x1="18.5" y1="93.3" x2="81.5" y2="6.7"/>
+            <!-- Outer rim, double ring -->
+            <circle cx="50" cy="50" r="46" fill="none" stroke="#000080" stroke-width="1.6"/>
+            <circle cx="50" cy="50" r="41.5" fill="none" stroke="#000080" stroke-width="0.6"/>
+            <!-- 24 spokes, tapered toward the rim -->
+            <g stroke="#000080" stroke-width="1.5" stroke-linecap="round">
+                <line x1="50" y1="50" x2="50.00" y2="10.00"/>
+                <line x1="50" y1="50" x2="60.35" y2="11.36"/>
+                <line x1="50" y1="50" x2="70.00" y2="15.36"/>
+                <line x1="50" y1="50" x2="78.28" y2="21.72"/>
+                <line x1="50" y1="50" x2="84.64" y2="30.00"/>
+                <line x1="50" y1="50" x2="88.64" y2="39.65"/>
+                <line x1="50" y1="50" x2="90.00" y2="50.00"/>
+                <line x1="50" y1="50" x2="88.64" y2="60.35"/>
+                <line x1="50" y1="50" x2="84.64" y2="70.00"/>
+                <line x1="50" y1="50" x2="78.28" y2="78.28"/>
+                <line x1="50" y1="50" x2="70.00" y2="84.64"/>
+                <line x1="50" y1="50" x2="60.35" y2="88.64"/>
+                <line x1="50" y1="50" x2="50.00" y2="90.00"/>
+                <line x1="50" y1="50" x2="39.65" y2="88.64"/>
+                <line x1="50" y1="50" x2="30.00" y2="84.64"/>
+                <line x1="50" y1="50" x2="21.72" y2="78.28"/>
+                <line x1="50" y1="50" x2="15.36" y2="70.00"/>
+                <line x1="50" y1="50" x2="11.36" y2="60.35"/>
+                <line x1="50" y1="50" x2="10.00" y2="50.00"/>
+                <line x1="50" y1="50" x2="11.36" y2="39.65"/>
+                <line x1="50" y1="50" x2="15.36" y2="30.00"/>
+                <line x1="50" y1="50" x2="21.72" y2="21.72"/>
+                <line x1="50" y1="50" x2="30.00" y2="15.36"/>
+                <line x1="50" y1="50" x2="39.65" y2="11.36"/>
             </g>
-            <circle cx="50" cy="50" r="4.5" fill="#000080"/>
+            <!-- Small beads ringing the rim, as on the flag emblem -->
+            <g fill="#000080">
+                <circle cx="55.81" cy="5.88" r="1.1"/>
+                <circle cx="67.03" cy="8.89" r="1.1"/>
+                <circle cx="77.09" cy="14.70" r="1.1"/>
+                <circle cx="85.30" cy="22.91" r="1.1"/>
+                <circle cx="91.11" cy="32.97" r="1.1"/>
+                <circle cx="94.12" cy="44.19" r="1.1"/>
+                <circle cx="94.12" cy="55.81" r="1.1"/>
+                <circle cx="91.11" cy="67.03" r="1.1"/>
+                <circle cx="85.30" cy="77.09" r="1.1"/>
+                <circle cx="77.09" cy="85.30" r="1.1"/>
+                <circle cx="67.03" cy="91.11" r="1.1"/>
+                <circle cx="55.81" cy="94.12" r="1.1"/>
+                <circle cx="44.19" cy="94.12" r="1.1"/>
+                <circle cx="32.97" cy="91.11" r="1.1"/>
+                <circle cx="22.91" cy="85.30" r="1.1"/>
+                <circle cx="14.70" cy="77.09" r="1.1"/>
+                <circle cx="8.89" cy="67.03" r="1.1"/>
+                <circle cx="5.88" cy="55.81" r="1.1"/>
+                <circle cx="5.88" cy="44.19" r="1.1"/>
+                <circle cx="8.89" cy="32.97" r="1.1"/>
+                <circle cx="14.70" cy="22.91" r="1.1"/>
+                <circle cx="22.91" cy="14.70" r="1.1"/>
+                <circle cx="32.97" cy="8.89" r="1.1"/>
+                <circle cx="44.19" cy="5.88" r="1.1"/>
+            </g>
+            <!-- Hub -->
+            <circle cx="50" cy="50" r="5.5" fill="#000080"/>
+            <circle cx="50" cy="50" r="2.2" fill="#fff" opacity="0.9"/>
         </svg>
         <div class="hero-content">
             <div class="badge">Smart India Hackathon 2026</div>
