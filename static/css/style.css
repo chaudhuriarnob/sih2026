@@ -9,6 +9,8 @@
     --green-light: #e7f7e6;
     --chakra-blue: #000080;
     --chakra-light: #eef1f8;
+    --light-blue: #0ea5e9;       /* Added Light Blue */
+    --light-blue-hover: #0284c7; /* Added Light Blue Hover */
     --text-dark: #1e293b;
     --text-light: #64748b;
     --bg-color: #f8fafc;
@@ -28,14 +30,14 @@ body, html {
 .hidden-section { display: none; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* --- INTRODUCTORY PAGE (Tricolor Theme) --- */
+/* --- INTRODUCTORY PAGE (Enhanced Tricolor Theme) --- */
 #intro-section {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Subtle Tricolor Diagonal Gradient Background */
-    background: linear-gradient(135deg, rgba(255,153,51,0.15) 0%, rgba(255,255,255,1) 50%, rgba(19,136,8,0.15) 100%);
+    /* Opacity increased to 0.55 for 40% stronger tint on the sides */
+    background: linear-gradient(135deg, rgba(255,153,51,0.55) 0%, rgba(255,255,255,1) 50%, rgba(19,136,8,0.55) 100%);
     text-align: center;
 }
 
@@ -79,8 +81,9 @@ body, html {
     font-weight: 500;
 }
 
+/* Updated to Light Blue */
 .hero-btn {
-    background-color: var(--chakra-blue);
+    background-color: var(--light-blue);
     color: var(--white);
     padding: 16px 35px;
     font-size: 1.2em;
@@ -89,13 +92,13 @@ body, html {
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.25);
+    box-shadow: 0 8px 20px rgba(14, 165, 233, 0.25);
 }
 
 .hero-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 0, 128, 0.35);
-    background-color: #0000a0;
+    box-shadow: 0 12px 25px rgba(14, 165, 233, 0.35);
+    background-color: var(--light-blue-hover);
 }
 
 /* --- MAIN APPLICATION PAGE --- */
@@ -106,7 +109,6 @@ body, html {
     justify-content: space-between;
     align-items: center;
     color: var(--white);
-    /* Hard Tricolor line under the header */
     border-bottom: 5px solid;
     border-image: linear-gradient(90deg, var(--saffron) 0%, var(--white) 50%, var(--green) 100%) 1;
 }
@@ -152,14 +154,16 @@ input {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Focus outline updated to light blue */
 input:focus {
     outline: none;
-    border-color: var(--saffron);
-    box-shadow: 0 0 0 4px var(--saffron-light);
+    border-color: var(--light-blue);
+    box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
 }
 
+/* Updated to Light Blue */
 .search-btn {
-    background-color: var(--saffron);
+    background-color: var(--light-blue);
     color: var(--white);
     padding: 16px 25px;
     font-size: 16px;
@@ -170,7 +174,7 @@ input:focus {
     transition: background 0.2s;
 }
 
-.search-btn:hover { background-color: var(--saffron-dark); }
+.search-btn:hover { background-color: var(--light-blue-hover); }
 
 /* --- RESULTS CARDS --- */
 #results { margin-top: 40px; }
