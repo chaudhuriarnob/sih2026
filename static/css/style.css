@@ -1,11 +1,16 @@
-/* Color Palette & Variables */
+/* Indian Tricolor Color Palette & Variables */
 :root {
-    --primary: #05C7F7;
-    --primary-dark: #039bc2;
-    --primary-light: #e0f8ff;
+    --saffron: #FF9933;
+    --saffron-dark: #e88624;
+    --saffron-light: #fff3e6;
+    --white: #FFFFFF;
+    --green: #138808;
+    --green-dark: #0f6e06;
+    --green-light: #e7f7e6;
+    --chakra-blue: #000080;
+    --chakra-light: #eef1f8;
     --text-dark: #1e293b;
     --text-light: #64748b;
-    --white: #ffffff;
     --bg-color: #f8fafc;
 }
 
@@ -23,58 +28,60 @@ body, html {
 .hidden-section { display: none; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* --- INTRODUCTORY PAGE --- */
+/* --- INTRODUCTORY PAGE (Tricolor Theme) --- */
 #intro-section {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Custom gradient using your #05C7F7 hex code */
-    background: linear-gradient(135deg, var(--primary) 0%, #004e73 100%);
+    /* Subtle Tricolor Diagonal Gradient Background */
+    background: linear-gradient(135deg, rgba(255,153,51,0.15) 0%, rgba(255,255,255,1) 50%, rgba(19,136,8,0.15) 100%);
     text-align: center;
 }
 
 .hero-content {
     max-width: 800px;
     padding: 50px;
-    /* Glassmorphism Effect */
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    color: var(--white);
+    box-shadow: 0 20px 40px rgba(0,0,80,0.08);
 }
 
 .badge {
     display: inline-block;
-    background: rgba(255,255,255,0.2);
-    padding: 8px 16px;
+    background: var(--saffron);
+    color: var(--white);
+    padding: 8px 18px;
     border-radius: 20px;
     font-size: 0.9em;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(255, 153, 51, 0.3);
 }
 
 .hero-content h1 {
     font-size: 4em;
     margin: 0 0 20px 0;
     font-weight: 800;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: var(--chakra-blue);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .hero-content p {
     font-size: 1.3em;
     line-height: 1.6;
     margin-bottom: 40px;
-    color: #e2f8ff;
+    color: var(--text-dark);
+    font-weight: 500;
 }
 
 .hero-btn {
-    background-color: var(--white);
-    color: var(--primary-dark);
+    background-color: var(--chakra-blue);
+    color: var(--white);
     padding: 16px 35px;
     font-size: 1.2em;
     font-weight: 700;
@@ -82,39 +89,41 @@ body, html {
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 128, 0.25);
 }
 
 .hero-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-    background-color: var(--primary-light);
+    box-shadow: 0 12px 25px rgba(0, 0, 128, 0.35);
+    background-color: #0000a0;
 }
 
 /* --- MAIN APPLICATION PAGE --- */
 .app-header {
-    background: linear-gradient(90deg, var(--primary) 0%, #03a0c7 100%);
+    background: var(--chakra-blue);
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--white);
-    box-shadow: 0 4px 12px rgba(5, 199, 247, 0.3);
+    /* Hard Tricolor line under the header */
+    border-bottom: 5px solid;
+    border-image: linear-gradient(90deg, var(--saffron) 0%, var(--white) 50%, var(--green) 100%) 1;
 }
 
-.app-header h2 { margin: 0; font-size: 1.5em; }
+.app-header h2 { margin: 0; font-size: 1.5em; letter-spacing: 0.5px; }
 
 .nav-btn {
     background: transparent;
     color: var(--white);
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.4);
     padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
     transition: 0.2s;
 }
-.nav-btn:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+.nav-btn:hover { background: rgba(255,255,255,0.15); border-color: var(--white); }
 
 .container {
     max-width: 900px;
@@ -122,10 +131,10 @@ body, html {
     background: var(--white);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 25px rgba(0,0,80,0.06);
 }
 
-.search-header h3 { margin-top: 0; color: var(--text-dark); font-size: 1.8em; }
+.search-header h3 { margin-top: 0; color: var(--chakra-blue); font-size: 1.8em; }
 .search-header p { color: var(--text-light); font-size: 1.1em; }
 
 .search-box {
@@ -145,12 +154,12 @@ input {
 
 input:focus {
     outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px var(--primary-light);
+    border-color: var(--saffron);
+    box-shadow: 0 0 0 4px var(--saffron-light);
 }
 
 .search-btn {
-    background-color: var(--primary);
+    background-color: var(--saffron);
     color: var(--white);
     padding: 16px 25px;
     font-size: 16px;
@@ -161,7 +170,7 @@ input:focus {
     transition: background 0.2s;
 }
 
-.search-btn:hover { background-color: var(--primary-dark); }
+.search-btn:hover { background-color: var(--saffron-dark); }
 
 /* --- RESULTS CARDS --- */
 #results { margin-top: 40px; }
@@ -171,16 +180,16 @@ input:focus {
     padding: 25px;
     margin-bottom: 25px;
     border: 1px solid #e2e8f0;
-    border-left: 6px solid var(--primary);
+    border-left: 6px solid var(--chakra-blue);
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(5, 199, 247, 0.15);
-    border-color: var(--primary-light);
+    box-shadow: 0 12px 25px rgba(0, 0, 128, 0.1);
+    border-color: var(--chakra-light);
 }
 
 .card-header {
@@ -191,16 +200,16 @@ input:focus {
 }
 
 .card-header h4 { margin: 0; font-size: 1.25em; color: var(--text-dark); max-width: 80%; line-height: 1.4; }
-.std-num { color: var(--primary-dark); font-weight: 800; }
+.std-num { color: var(--saffron-dark); font-weight: 800; }
 
 .score-badge {
-    background: var(--primary);
+    background: var(--green);
     color: var(--white);
     padding: 6px 14px;
     border-radius: 20px;
     font-weight: 700;
     font-size: 0.9em;
-    box-shadow: 0 4px 10px rgba(5, 199, 247, 0.3);
+    box-shadow: 0 4px 10px rgba(19, 136, 8, 0.25);
 }
 
 .card-desc { color: var(--text-light); line-height: 1.6; font-size: 1.05em; margin-bottom: 20px; }
@@ -208,11 +217,11 @@ input:focus {
 .card-meta { display: flex; gap: 10px; flex-wrap: wrap; }
 
 .meta-tag {
-    background: var(--primary-light);
-    color: var(--primary-dark);
+    background: var(--chakra-light);
+    color: var(--chakra-blue);
     padding: 6px 14px;
     border-radius: 6px;
     font-size: 0.85em;
     font-weight: 700;
 }
-.meta-tag.status-active { background: #dcfce7; color: #166534; }
+.meta-tag.status-active { background: var(--green-light); color: var(--green-dark); }
